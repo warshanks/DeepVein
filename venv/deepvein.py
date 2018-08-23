@@ -30,20 +30,24 @@ print("""
 playerName = input("What is your name?\n")
 print("Congratulations " + playerName + " you are an alpha tester!")
 time.sleep(2)
-os.system('cls' if os.name == 'nt' else 'clear')
-print('Incoming transmission', end='', flush=True)
-time.sleep(2)
-print(".", end='', flush=True)
-time.sleep(2)
-print(".", end='', flush=True)
-time.sleep(2)
-print(".\n\n", end='', flush=True)
-time.sleep(2)
 
+def transmissionIncoming():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print('Incoming transmission', end='', flush=True)
+    time.sleep(2)
+    print(".", end='', flush=True)
+    time.sleep(2)
+    print(".", end='', flush=True)
+    time.sleep(2)
+    print(".\n\n", end='', flush=True)
+    time.sleep(2)
+
+transmissionIncoming()
 
 print("DeepVein corporation: Welcome to DeepVein, " + playerName + "!")
 time.sleep(1)
-print("""____________________________________________________________________________________________________________________
+print("""
+____________________________________________________________________________________________________________________
 |We are delighted that you have chosen to work for the galaxy’s most profitable mining corporation to date!         | 
 |Your duties are as follows: Deliver materials to our new mining operation on [insert planet name], perform any     | 
 |maintenance that may be required, and return to headquarters with the processed ores that have been stored in the  |
