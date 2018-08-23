@@ -28,6 +28,10 @@ print("""
     ~~~~          \:\__\       \/__/         /:/  /   
                    \/__/                     \/__/    \n""")
 playerName = input("What is your name?\n")
+
+while playerName == "":
+    playerName = input("Please input a name:\n")
+
 print("Congratulations " + playerName + " you are an alpha tester!")
 time.sleep(2)
 def clearScreen():
@@ -84,7 +88,7 @@ print("DeepVein corporation: Congratulations " + playerName + "!")
 time.sleep(1)
 print("""
 ______________________________________________________________________________________________________________________
-|Congratulations, """ + playerName + """ you have arrived at XR-2521!                                                 |
+|Congratulations, """ + playerName + """ you have arrived at XR-2521!                                                                    |
 |You will be delighted to be informed that you are the very first human representative to visit                       |
 |As a thank you for your dedicated time we would like you to give XR-2521 a more proper name.                         |
 |Please respond with your desired choice and we will update our data systems.                                         |
@@ -94,6 +98,9 @@ time.sleep(1)
 print("Thank you for working with DeepVein!\n")
 
 planetName = input("Please name the planet: ")
+
+while planetName == "":
+    planetName = input("Please input a valid name for the planet:\n")
 
 clearScreen()
 time.sleep(1)
