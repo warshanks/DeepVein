@@ -152,7 +152,14 @@ print("""
 [a] - Access the depository and transit lines.
 [b] - Visit both mining operations at the mountains to the east and west.
 [c] - Confirm that all solar panels are operating efficiently and that there are no breaks in the power supply.\n""")
-decision1 = input("What would you like to do? ")
+#decision1 = input("What would you like to do? ")
+
+while True:
+    decision1 = input("What would you like to do? ")
+    if decision1 not in ("a", "b", "c", "e"):
+        print("Not a valid action.")
+    else:
+        break
 
 if decision1 == "a":
     clearScreen()
@@ -171,5 +178,22 @@ if decision1 == "c":
     time.sleep(1)
     print("""You begin to make your way past the imposing depository and into the solar fields to access
 any damage or dust coverage on the solar panels.""")
+
+if decision1 == "e":
+    clearScreen()
+    time.sleep(2)
+    print("""You turn around, back into [insert ship name] and recycle the airlock.
+Ignoring the comms console you power up the ship and return to your blissful slumber in the cryo pod.
+When you awake you receive one last message.""")
+    transmissionIncoming()
+    print("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
+    time.sleep(1)
+    print("""
+ ___________________________________________________________________________________________________________________
+|Your employment with the DeepVein Corporation has been terminated.                                                 |    
+ ------------------------------------------------------------------------------------------------------------------- 
+ """)
+    time.sleep(1)
+
 
 continueKey()
