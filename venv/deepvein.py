@@ -145,6 +145,31 @@ Directly in front of you lies the massive depository building where the processe
 for transit back to Deepvien Headquarters. Running east and west from the building are two roads beaten into the dust
 by large transit vehicles, bristling with solar panels and sensor arrays. You see a couple of these in the distance
 heading towards the depository. Beyond the depository lies the solar field where hundreds more solar panels lie
-in the green-gray dust. The day is yours what duty would you like to accomplish first? 
+in the green-gray dust. The day is yours what duty would you like to accomplish first?\n 
 """)
+time.sleep(1)
+print("""
+[a] - Access the depository and transit lines.
+[b] - Visit both mining operations at the mountains to the east and west.
+[c] - Confirm that all solar panels are operating efficiently and that there are no breaks in the power supply.\n""")
+decision1 = input("What would you like to do? ")
 
+if decision1 == "a":
+    clearScreen()
+    time.sleep(1)
+    print("""You step off the ship’s gangplank and into the dirt, approaching the depository. 
+The building looms over you.""")
+
+if decision1 == "b":
+    clearScreen()
+    time.sleep(1)
+    print("""You step into the dirt of """ + planetName + """ and begin making your way towards a small
+refueling depot where you know you can hitch a ride to either of the mountains on the transit vehicles.""")
+
+if decision1 == "c":
+    clearScreen()
+    time.sleep(1)
+    print("""You begin to make your way past the imposing depository and into the solar fields to access
+any damage or dust coverage on the solar panels.""")
+
+continueKey()
