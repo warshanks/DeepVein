@@ -152,7 +152,6 @@ print("""
 [a] - Access the depository and transit lines.
 [b] - Visit both mining operations at the mountains to the east and west.
 [c] - Confirm that all solar panels are operating efficiently and that there are no breaks in the power supply.\n""")
-#decision1 = input("What would you like to do? ")
 
 while True:
     decision1 = input("What would you like to do? ")
