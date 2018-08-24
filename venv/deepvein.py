@@ -185,6 +185,7 @@ if decision1 == "e":
     print("""You turn around, back into [insert ship name] and recycle the airlock.
 Ignoring the comms console you power up the ship and return to your blissful slumber in the cryo pod.
 When you awake you receive one last message.""")
+    continueKey()
     transmissionIncoming()
     print("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
     time.sleep(1)
