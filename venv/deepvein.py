@@ -18,6 +18,12 @@ def transmissionIncoming():
 def continueKey():
     wait = input("Press [ENTER] to continue...")
 
+def slowPrint(s):
+    for c in s:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(0.01)
+
 clearScreen()
 print("Welcome to DeepVein\nThis is an Alpha Build.\n")
 print("""
@@ -54,17 +60,17 @@ time.sleep(2)
 
 transmissionIncoming()
 
-print("DeepVein corporation: Welcome to DeepVein, " + playerName + "!")
+slowPrint("DeepVein corporation: Welcome to DeepVein, " + playerName + "!")
 time.sleep(1)
-print("""
-____________________________________________________________________________________________________________________
+slowPrint("""
+ ___________________________________________________________________________________________________________________
 |We are delighted that you have chosen to work for the galaxy’s most profitable mining corporation to date!         | 
 |Your duties are as follows: Deliver materials to our new mining operation on XR-2521, perform any                  | 
 |maintenance that may be required, and return to headquarters with the processed ores that have been stored in the  |
 |depository.                                                                                                        |
--------------------------------------------------------------------------------------------------------------------- """)
+ -------------------------------------------------------------------------------------------------------------------\n\n""")
 time.sleep(1)
-print("We are looking forward to working with you!\n")
+slowPrint("We are looking forward to working with you!\n\n")
 
 continueKey()
 
@@ -85,18 +91,18 @@ continueKey()
 
 transmissionIncoming()
 
-print("DeepVein corporation: Congratulations " + playerName + "!")
+slowPrint("DeepVein corporation: Congratulations " + playerName + "!")
 time.sleep(1)
-print("""
-______________________________________________________________________________________________________________________
+slowPrint("""
+ _____________________________________________________________________________________________________________________
 |Congratulations, """ + playerName + """ you have arrived at XR-2521!                                                                    |
 |You will be delighted know that you are the very first human representative to visit.                                |
 |As a thank you for your dedicated time we would like you to give XR-2521 a more proper name.                         |
 |Please respond with your desired choice and we will update our data systems.                                         |
-----------------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------
 """)
 time.sleep(1)
-print("Thank you for working with DeepVein!\n")
+slowPrint("Thank you for working with DeepVein!\n")
 
 planetName = input("Please name the planet: ")
 
@@ -123,11 +129,11 @@ hear another blip on the communications console.
 continueKey()
 
 transmissionIncoming()
-print("DeepVein Corporation: You have arrived!\n")
+slowPrint("DeepVein Corporation: You have arrived!\n")
 time.sleep(1.5)
-print("Below are your duties for the day. Please report back to the ship when all are completed, thank you.\n")
+slowPrint("Below are your duties for the day. Please report back to the ship when all are completed, thank you.\n")
 time.sleep(1)
-print("""
+slowPrint("""
  ____________________________________________________________________________________________________________________
 |-Access the depository and transit lines.                                                                           | 
 |-Visit both mining operations at the mountains to the east and west.                                                |
@@ -187,9 +193,9 @@ Ignoring the comms console you power up the ship and return to your blissful slu
 When you awake you receive one last message.""")
     continueKey()
     transmissionIncoming()
-    print("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
+    slowPrint("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
     time.sleep(1)
-    print("""
+    slowPrint("""
  ___________________________________________________________________________________________________________________
 |Your employment with the DeepVein Corporation has been terminated.                                                 |    
  ------------------------------------------------------------------------------------------------------------------- 
