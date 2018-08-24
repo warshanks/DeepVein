@@ -19,7 +19,7 @@ def continueKey():
     wait = input("Press [ENTER] to continue...")
 
 clearScreen()
-print("Welcome to DeepVein\nThis is a Pre-Alpha Build.\n")
+print("Welcome to DeepVein\nThis is an Alpha Build.\n")
 print("""
       ___           ___           ___           ___     
      /\  \         /\  \         /\  \         /\  \    
