@@ -7,13 +7,13 @@ def clearScreen():
 def transmissionIncoming():
     os.system('cls' if os.name == 'nt' else 'clear')
     print('Incoming transmission', end='', flush=True)
-    time.sleep(2)
+    time.sleep(1)
     print(".", end='', flush=True)
-    time.sleep(2)
+    time.sleep(1)
     print(".", end='', flush=True)
-    time.sleep(2)
+    time.sleep(1)
     print(".\n\n", end='', flush=True)
-    time.sleep(2)
+    time.sleep(1)
 
 def continueKey():
     wait = input("Press [ENTER] to continue...")
