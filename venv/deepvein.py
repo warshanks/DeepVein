@@ -69,9 +69,9 @@ slowPrint("""
 |Your duties are as follows: Deliver materials to our new mining operation on XR-2521, perform any                  | 
 |maintenance that may be required, and return to headquarters with the processed ores that have been stored in the  |
 |depository.                                                                                                        |
+|We are looking forward to working with you!                                                                        |
  -------------------------------------------------------------------------------------------------------------------\n\n""")
 time.sleep(1)
-slowPrint("We are looking forward to working with you!\n\n")
 
 continueKey()
 
@@ -100,10 +100,10 @@ slowPrint("""
 |You will be delighted know that you are the very first human representative to visit.                                |
 |As a thank you for your dedicated time we would like you to give XR-2521 a more proper name.                         |
 |Please respond with your desired choice and we will update our data systems.                                         |
+|Thank you for working with DeepVein!                                                                                 |
  ---------------------------------------------------------------------------------------------------------------------
-""")
+\n""")
 time.sleep(1)
-slowPrint("Thank you for working with DeepVein!\n")
 
 planetName = input("Please name the planet: ")
 
