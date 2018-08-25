@@ -1,6 +1,7 @@
 #Project DeepVein Pre-Alpha Python 3.7.0 Test
 # -*- coding: utf-8 -*-
 import shelve, time, sys, os
+os.system("mode con cols=120 lines=50")
 def clearScreen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
