@@ -159,52 +159,92 @@ heading towards the depository. Beyond the depository lies the solar field where
 in the green-gray dust. The day is yours. What duty would you like to accomplish first?\n 
 """)
 time.sleep(1)
-print("""
-[a] - Access the depository and transit lines.
-[b] - Visit both mining operations at the mountains to the east and west.
-[c] - Confirm that all solar panels are operating efficiently and that there are no breaks in the power supply.\n""")
 
-while True:
-    decision1 = input("What would you like to do? ")
-    if decision1 not in ("a", "b", "c", "e"):
-        print("Not a valid action.")
-    else:
-        break
+choiceA = "[a] - Access the depository and transit lines.\n"
+choiceB = "[b] - Visit both mining operations at the mountains to the east and west.\n"
+choiceC = "[c] - Confirm that all solar panels are operating efficiently and that there are no breaks in the power supply.\n"
+i = 0
+while i < 2:
 
-if decision1 == "a":
-    clearScreen()
-    time.sleep(1)
-    print("""You step off the ship’s gangplank and into the dirt, approaching the depository. 
-The building looms over you.""")
+    print(choiceA + choiceB + choiceC)
 
-if decision1 == "b":
-    clearScreen()
-    time.sleep(1)
-    print("""You step into the dirt of """ + planetName + """ and begin making your way towards a small
-refueling depot where you know you can hitch a ride to either of the mountains on the transit vehicles.""")
+    while True:
+        decision1 = input("What would you like to do? ")
+        if decision1 not in ("a", "b", "c", "e"):
+            print("Not a valid action.")
+        else:
+            break
 
-if decision1 == "c":
-    clearScreen()
-    time.sleep(1)
-    print("""You begin to make your way past the imposing depository and into the solar fields to access
+    if decision1 == "a":
+        i += 1
+        clearScreen()
+        time.sleep(1)
+        print("""You step off the ship’s gangplank and into the dirt, approaching the depository. 
+The building looms over you.\n
+On the east and west ends of the building the transit lines lead into a large garage door, that also serves as 
+fully functional airlock. As you approach the door on the eastern side, one of the enormous vehicles aproshes,
+full to the brim with rough ore. The airlock begins to open and you step in just as the truck pulls in behind you.
+Within you see rows upon rows of sealed boxes stacked neatly side by side on conveyor shelves. The truck backs
+gracefully into position and dumps its contents into a pit where it began to be sorted and cleaned by dozens of
+robotic hands that hung from the ceiling. All seems well, but to be sure you approach a console in the center of
+the room, its display says that all systems in the depository and along the transit line are fully functional. 
+""")
+        choiceA = ""
+        time.sleep(1)
+        slowPrint("-Task Complete-\n")
+        continueKey()
+        clearScreen()
+        time.sleep(1)
+        print("You return to the landing zone and decide what to do next.")
+        continueKey()
+        clearScreen()
+
+    if decision1 == "b":
+        i += 1
+        clearScreen()
+        time.sleep(1)
+        print("""You step into the dirt of """ + planetName + """ and begin making your way towards a small
+refueling depot where you know you can hitch a ride to either of the mountains on the transit vehicles.
+You summon a vehicle at the station and wait patiently. A short while later you see a  trail of green dust kicked
+up as the truck approaches. It pulls up next to you, the  cab door opens, hissing as the atmosphere settles inside.
+You jump in punch in the command to travel to the mountain to the west.""")
+        choiceB = ""
+        continueKey()
+        clearScreen()
+
+    if decision1 == "c":
+        i += 1
+        clearScreen()
+        time.sleep(1)
+        print("""You begin to make your way past the imposing depository and into the solar fields to access
 any damage or dust coverage on the solar panels.""")
+        choiceC = ""
+        continueKey()
+        clearScreen()
 
-if decision1 == "e":
-    clearScreen()
-    time.sleep(2)
-    print("""You turn around, back into [insert ship name] and recycle the airlock.
+    if decision1 == "e":
+        clearScreen()
+        time.sleep(2)
+        print("""You turn around, back into [insert ship name] and recycle the airlock.
 Ignoring the comms console you power up the ship and return to your blissful slumber in the cryo pod.
 When you awake you receive one last message.""")
-    continueKey()
-    transmissionIncoming()
-    slowPrint("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
-    time.sleep(1)
-    slowPrint("""
+        continueKey()
+        transmissionIncoming()
+        slowPrint("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
+        time.sleep(1)
+        slowPrint("""
  ___________________________________________________________________________________________________________________
 |Your employment with the DeepVein Corporation has been terminated.                                                 |    
  ------------------------------------------------------------------------------------------------------------------- 
  """)
-    time.sleep(1)
+        time.sleep(1)
+        continueKey()
+        quit()
+
+    if i == 1:
+        print("Two of your three duties remain, what would you like to do?\n")
 
 
+clearScreen()
+print("Alien placeholder")
 continueKey()
