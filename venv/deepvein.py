@@ -1,6 +1,6 @@
 #Project DeepVein Pre-Alpha Python 3.7.0 Test
 # -*- coding: utf-8 -*-
-import shelve, time, sys, os
+import shelve, time, sys, os, keyboard
 
 if os.name == 'nt':
     os.system("mode con cols=120 lines=50")
@@ -22,11 +22,18 @@ def transmissionIncoming():
 def continueKey():
     wait = input("Press [ENTER] to continue...")
 
+
+
 def slowPrint(s):
-    for c in s:
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        time.sleep(0.01)
+        for c in s:
+            sys.stdout.write(c)
+            sys.stdout.flush()
+            if keyboard.is_pressed(' '):
+                time.sleep(0.01)
+
+            else:
+                time.sleep(0.05)
+
 
 clearScreen()
 print("Welcome to DeepVein\nThis is an Alpha Build.\n")
@@ -230,7 +237,7 @@ Ignoring the comms console you power up the ship and return to your blissful slu
 When you awake you receive one last message.""")
         continueKey()
         transmissionIncoming()
-        slowPrint("DeepVein corporation: You’re employment with the Deepvien corporation has been terminated.\n")
+        slowPrint("DeepVein Corporation: You’re employment with the DeepVein corporation has been terminated.\n")
         time.sleep(1)
         slowPrint("""
  ___________________________________________________________________________________________________________________
